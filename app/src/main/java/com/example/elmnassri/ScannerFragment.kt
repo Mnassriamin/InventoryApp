@@ -208,9 +208,9 @@ class ScannerFragment : Fragment() {
                         name = name,
                         price = price,
                         barcode = barcode,
-                        imageUri = selectedImageUri?.toString()
                     )
-                    viewModel.upsertItem(newItem)
+                    // Pass both the item and the new image to the ViewModel
+                    viewModel.upsertItem(newItem, selectedImageUri)
                     findNavController().navigate(R.id.nav_storage)
                 } else {
                     Toast.makeText(requireContext(), "Name and Price cannot be empty", Toast.LENGTH_SHORT).show()

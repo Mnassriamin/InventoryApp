@@ -1,7 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    id("org.jetbrains.kotlin.kapt") // Use kapt instead of ksp
+    id("org.jetbrains.kotlin.kapt")
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -46,6 +47,8 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.firebase.firestore)
+    implementation(libs.firebase.storage)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -53,7 +56,7 @@ dependencies {
     // Room Database
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
-    kapt(libs.androidx.room.compiler) // Use kapt for the compiler
+    kapt(libs.androidx.room.compiler)
 
     // ViewModel and Activity KTX
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.2")
@@ -74,4 +77,8 @@ dependencies {
     implementation("androidx.camera:camera-view:$cameraVersion")
     implementation("io.coil-kt:coil:2.6.0")
 
+    // Firebase Libraries (Corrected based on your research)
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.analytics)
+    implementation(libs.firebase.firestore)
 }

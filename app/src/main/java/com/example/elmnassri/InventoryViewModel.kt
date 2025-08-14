@@ -1,5 +1,6 @@
 package com.example.elmnassri
 
+import android.net.Uri
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -10,6 +11,10 @@ import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.launch
 
 class InventoryViewModel(private val repository: ItemRepository) : ViewModel() {
+
+    init {
+        repository.startRealtimeSync()
+    }
 
     // Holds the current search query
     private val _searchQuery = MutableStateFlow("")
@@ -26,8 +31,8 @@ class InventoryViewModel(private val repository: ItemRepository) : ViewModel() {
         _searchQuery.value = query
     }
 
-    fun upsertItem(item: Item) = viewModelScope.launch {
-        repository.upsertItem(item)
+    fun upsertItem(item: Item, imageUri: Uri?) = viewModelScope.launch {
+        repository.upsertItem(item, imageUri)
     }
 
     fun deleteItem(item: Item) = viewModelScope.launch {

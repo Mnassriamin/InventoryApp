@@ -10,14 +10,14 @@ data class Item(
     val id: Int = 0,
 
     @ColumnInfo(name = "item_name")
-    val name: String,
+    val name: String = "", // Add default value
 
     @ColumnInfo(name = "item_price")
-    val price: Double,
+    val price: Double = 0.0, // Add default value
 
     @ColumnInfo(name = "barcode_data")
-    val barcode: String,
+    val barcode: String = "", // Add default value
 
-    @ColumnInfo(name = "image_uri") // Add this
-    val imageUri: String? = null     // Add this line
+    @ColumnInfo(name = "image_uri")
+    val imageUri: String? = null
 )
