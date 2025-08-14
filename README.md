@@ -1,7 +1,6 @@
 StorePal - Android Inventory Scanner
 StorePal is a modern Android application designed for small store owners to manage their inventory effortlessly. It features real-time database synchronization with Firebase, barcode scanning for quick price checks, and a clean, user-friendly interface built with Material Design 3.
 
-Export to Sheets
 ✨ Features
 Real-Time Database: Built with Firebase Firestore as the backend, ensuring data is always synced across devices and persists even if the app is uninstalled.
 
