@@ -3,6 +3,7 @@ StorePal - Android Inventory Scanner
 StorePal is a modern Android application designed for small store owners to manage their inventory effortlessly. It features real-time database synchronization with Firebase, barcode scanning for quick price checks, and a clean, user-friendly interface built with Material Design 3.
 
 ✨ Features
+
 Real-Time Database: Built with Firebase Firestore as the backend, ensuring data is always synced across devices and persists even if the app is uninstalled.
 
 Offline First: Uses a local Room database as an offline cache, allowing the app to be fully functional without an internet connection.
@@ -26,6 +27,7 @@ Dynamic Search: A search bar on the main screen to filter the inventory list by 
 Modern UI: A clean, grid-based layout with a bottom navigation bar, built using the latest Material Design 3 components and principles.
 
 🛠️ Tech Stack & Architecture
+
 This project is built using 100% Kotlin and follows modern Android development practices.
 
 Architecture: MVVM (Model-View-ViewModel)
@@ -61,6 +63,7 @@ ML Kit: For high-performance on-device barcode detection.
 FileProvider: For securely handling image files.
 
 🚀 Setup and Installation
+
 To build and run this project yourself, you will need to set up your own Firebase project.
 
 Clone the repository:
@@ -68,6 +71,7 @@ Clone the repository:
 Bash
 
 git clone https://github.com/Mnassriamin/InventoryApp.git
+
 Firebase Setup:
 
 Go to the Firebase Console and create a new project.
@@ -99,6 +103,7 @@ Let Gradle sync the dependencies.
 Build and run the app.
 
 📄 License
+
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 MIT License
